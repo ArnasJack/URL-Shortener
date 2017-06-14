@@ -1,0 +1,311 @@
+/*****************************************/
+/*     GENERAL STYLING             */
+/*****************************************/
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #34495e;
+  position: relative;
+}
+
+
+/*****************************************/
+/*     ERROR MESSAGE STYLING             */
+/*****************************************/
+.message {
+  position: fixed;
+  width: 300px;
+  max-width: 94%;
+  padding: 30px;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-animation: slideIn 1s; /* Safari 4.0 - 8.0 */
+  animation: slideIn 1s;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+  z-index: 9;
+}
+
+.copied-message {
+  background-color: #2FFF28;
+}
+
+.error-message {
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid #F53439;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes slideIn {
+    from {
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+    to {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+    }
+} 
+
+/* Standard syntax */ 
+@keyframes slideIn {
+    from {
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+    to {
+      -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+}
+
+/*****************************************/
+/*     HEADER STYLING                    */
+/*****************************************/
+.header {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.header span {
+  display: block;
+  color: #E14C3D;
+  font-size: 14px;
+}
+
+#logo {
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#logo.rotate {
+  -webkit-animation: rotate 0.5s; /* Safari 4.0 - 8.0 */
+  animation: rotate 0.5s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+} 
+
+/* Standard syntax */ 
+@keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+}
+
+/*****************************************/
+/*     FORM STYLING                      */
+/*****************************************/
+.shortenUrl-bar {
+  width: 920px;
+  max-width: 94%;
+  margin: 0 auto;
+  padding-top: 150px;
+  overflow: hidden;
+}
+
+.shortenUrl-bar input {
+  width: 78%;
+  float: left;
+  font-size: 16px;
+}
+
+.input-btn {
+  width: 22%;
+  float: right;
+  display: block;
+}
+
+.shortenUrl-bar input {
+    line-height: 48px;
+    padding: 0 15px;
+}
+
+.input-btn button {
+  width: 100%;
+  border-radius: none;
+  border: none;
+  background-color: #E14C3D;
+  color: #fff;
+  line-height: 52px;
+  padding: 0 15px;
+  font-size: 15px;
+}
+
+.input-btn button:hover {
+  cursor: pointer;
+  background-color: #FC5344;
+}
+
+/*****************************************/
+/*     URL LISTING STYLING               */
+/*****************************************/
+.new-url {
+  padding: 50px 0;
+  clear: both;
+  font-size: 22px;
+}
+
+.new-url ul {
+  margin: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0;
+  list-style-type: none;
+}
+
+.new-url ul li {
+  background-color: #fff;
+  padding: 15px 20px;
+  position: relative;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.new-url ul li:first-child {
+  background-color: #B4FFC1;
+}
+
+.new-url ul li:after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 60px;
+  top: -46px;
+  border-left: 2px dashed #E14C3D;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/*****************************************/
+/*     SMALL BUTTONS STYLING             */
+/*****************************************/
+.buttons button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-background-size: 25px;
+  background-size: 25px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  outline: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.buttons button:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.button-copy {
+  background-image: url('../images/copy.png');
+}
+
+.buttons .button-open {
+  -webkit-background-size: 29px;
+  background-size: 29px;
+  background-image: url('../images/open.png');
+}
+
+.buttons button:hover {
+  cursor: pointer;
+}
+
+.buttons {
+  float: right;
+}
+
+/*****************************************/
+/*     MOBILE STYLING                    */
+/*****************************************/
+@media screen and (max-width: 655px) {
+
+  .shortenUrl-bar {
+    padding-top: 0;
+  }
+
+  .shortenUrl-bar input {
+    width: 100%;
+  }
+
+  .input-btn {
+    width: 100%;
+    margin-top: 3px;
+  }
+
+  .input-btn button {
+    line-height: 45px;
+  }
+
+  .new-url {
+    padding: 30px 0;
+  }
+
+}
